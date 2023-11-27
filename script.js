@@ -1,6 +1,7 @@
 const buttonAction = document.querySelector('#enter');
 const todoList = document.querySelector('#list');
 const deleteAction = document.querySelector('#delete');
+const dateAction = document.querySelector('#show-date');
 
 
 buttonAction.addEventListener('click', (event) => {
@@ -17,6 +18,13 @@ deleteAction.addEventListener('click', (event) =>{
     event.preventDefault();
     todoList.removeChild(todoList.lastChild);
     console.log(todoList);
+});
+
+dateAction.addEventListener('click', (event) => {
+    event.preventDefault();
+    const currentDate = new Date();
+    const currentDateTime = currentDate.toLocaleString();
+    console.log(currentDate);
 });
 
 
