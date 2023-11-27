@@ -1,5 +1,7 @@
 const buttonAction = document.querySelector('#enter');
 const todoList = document.querySelector('#list');
+const deleteAction = document.querySelector('#delete');
+
 
 buttonAction.addEventListener('click', (event) => {
     event.preventDefault();
@@ -8,8 +10,16 @@ buttonAction.addEventListener('click', (event) => {
     listItem.innerText = input.value;
     todoList.appendChild(listItem);
     console.log(listItem);
+    console.log(todoList);
 });
 
-console.log(todoList);
+deleteAction.addEventListener('click', (event) =>{
+    event.preventDefault();
+    todoList.removeChild(todoList.lastChild);
+    console.log(todoList);
+});
+
+
+
 
 
